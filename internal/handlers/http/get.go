@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"errors"
-	"fmt"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"
 	"github.com/go-playground/validator/v10"
@@ -55,7 +54,6 @@ func Get(log *slog.Logger, urlStorage storage.URLStorage) http.HandlerFunc {
 
 		u, _ := url.Parse(req.Alias)
 		alias := u.Path[1:]
-		fmt.Println("ALIAS:", alias)
 		resURL, err := urlStorage.GetURL(alias)
 		if errors.Is(err, storage.ErrURLNotFound) {
 			log.Info("url not found", "alias", req.Alias)
