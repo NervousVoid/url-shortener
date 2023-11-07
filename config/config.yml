@@ -1,0 +1,8 @@
+url_alphabet: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_"
+url_length: 10
+http_server:
+  host: "0.0.0.0"
+  port: "8000"
+db:
+  host: "postgres"
+  port: "5432"
